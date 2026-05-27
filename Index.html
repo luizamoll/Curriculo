@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo | Maria Luiza Mol</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: #333; padding: 40px 20px; }
+        .container { max-width: 700px; margin: auto; }
+        
+        .card { 
+            background: white; padding: 30px; border-radius: 15px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; 
+            border: 2px solid transparent; transition: all 0.3s ease; 
+        }
+        .card:hover { 
+            border: 2px solid #ff00ff; 
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px rgba(255, 0, 255, 0.2);
+            transform: scale(1.01);
+        }
+
+        .shape-3d {
+            width: 100px; height: 100px; margin: 0 auto 30px;
+            background: linear-gradient(45deg, #ff00ff, #764ba2);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: morphing 8s infinite ease-in-out;
+            box-shadow: 0 0 25px #ff00ff;
+        }
+        @keyframes morphing {
+            0%, 100% { transform: rotate(0deg); border-radius: 30% 70% 70% 30%; }
+            50% { transform: rotate(180deg); border-radius: 50% 50% 30% 70%; }
+        }
+
+        h1 { color: #1a1a2e; margin-bottom: 5px; }
+        h2 { color: #ff00ff; font-size: 1.3em; margin-top: 0; }
+        .links a { display: inline-block; margin-right: 15px; color: #764ba2; font-weight: bold; text-decoration: none; }
+        .links a:hover { color: #ff00ff; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="shape-3d"></div>
+    
+    <div class="card">
+        <h1>Maria Luiza Mol</h1>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas | Foco em Backend</p>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/maria-luiza-ads" target="_blank">LinkedIn</a>
+            <a href="https://github.com/luizamoll" target="_blank">GitHub</a>
+        </div>
+        <p>📍 Belo Horizonte, MG | 📞 (31) 99166-3405 | ✉️ Mluizamoll@hotmail.com</p>
+    </div>
+
+    <div class="card">
+        <h2>Resumo Profissional</h2>
+        <p>Estudante de ADS com sólida bagagem em gestão operacional e resolução de problemas complexos. Em transição de carreira para a tecnologia, unindo a visão estratégica de negócio com a prática em desenvolvimento backend e infraestrutura de redes.</p>
+    </div>
+
+    <div class="card">
+        <h2>Experiência Técnica e Projetos</h2>
+        <p><strong>Proprietária - Restaurante D'Guster (2021-2025):</strong> Implementação de melhorias em processos através de ferramentas digitais e gestão financeira.</p>
+        <p><strong>Desenvolvimento de Software:</strong> Desenvolvimento de sistema de automação para e-commerce próprio, aplicando persistência de dados em SQL e rotinas de automação para otimização de gestão.</p>
+        <p><strong>Freelance Dev:</strong> Criação de sites e soluções de automação sob demanda.</p>
+    </div>
+
+    <div class="card">
+        <h2>Em Desenvolvimento</h2>
+        <p>Foco atual: Aprofundamento em <strong>Java (Backend)</strong> e otimização de <strong>Consultas SQL</strong> para ambientes de alta performance. Busco aplicar conceitos de Clean Code e versionamento contínuo em todos os meus projetos.</p>
+    </div>
+
+    <div class="card">
+        <h2>Formação</h2>
+        <p><strong>Análise e Desenvolvimento de Sistemas</strong> | Newton Paiva | Previsão: 2028.</p>
+        <p><em>Foco: Lógica de Programação, Organização de Computadores e Sistemas Operacionais.</em></p>
+        <p><strong>Assistente Administrativo</strong> | Senac | 2018-2019.</p>
+    </div>
+
+    <div class="card">
+        <h2>Competências</h2>
+        <p><strong>Técnicas:</strong> Lógica de Programação, C, Java, SQL, VS Code, Git/GitHub, Linux/Windows.</p>
+        <p><strong>Soft Skills:</strong> Proatividade, Comunicação, Organização, Pontualidade.</p>
+    </div>
+</div>
+</body>
+</html>

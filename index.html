@@ -3,77 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Maria Luiza Mol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Currículo | Maria Luiza Mol</title>
     <style>
-        :root { --primary: #ff00ff; --dark: #1a1a2e; --bg: #0f0f1a; }
+        :root { 
+            --amora-vibrante: #d67098; 
+            --fundo-pagina: #0f0f0f; 
+            --card-fundo: #e8e8e8; 
+            --texto-card: #1a1a1a; 
+        }
+
         body { 
-            font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #fff; 
-            margin: 0; padding: 20px; display: flex; justify-content: center; 
-        }
-        .container { max-width: 600px; width: 100%; }
-
-        /* Cabeçalho de Impacto */
-        .hero { text-align: center; padding: 40px 0; }
-        .shape-3d {
-            width: 120px; height: 120px; margin: 0 auto 20px;
-            background: linear-gradient(45deg, var(--primary), #764ba2);
-            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-            animation: morphing 10s infinite alternate;
-        }
-
-        /* Cards com efeito Neon */
-        .card { 
-            background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 20px;
-            margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: 0.4s; backdrop-filter: blur(10px);
-        }
-        /* O segredo: o efeito rosa agora é permanente nas bordas ou visível no toque */
-        .card:hover, .card:active { 
-            border-color: var(--primary);
-            box-shadow: 0 0 15px var(--primary);
-            transform: scale(1.02);
-        }
-
-        h1 { font-size: 2em; margin: 0; color: #fff; }
-        h2 { color: var(--primary); font-size: 1.1em; text-transform: uppercase; margin-bottom: 15px; }
-        .links a { 
-            color: #fff; text-decoration: none; padding: 10px 20px; 
-            border: 1px solid var(--primary); border-radius: 50px; margin: 5px; display: inline-block;
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--fundo-pagina); 
+            color: #ffffff; 
+            padding: 40px 20px; 
+            margin: 0; 
+            line-height: 1.8; 
         }
         
-        @keyframes morphing {
-            0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
-            100% { border-radius: 60% 40% 30% 70% / 70% 30% 40% 60%; }
+        .code-rain {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: -1; font-family: monospace;
+            color: #ffffff; opacity: 0.10; font-size: 14px;
         }
+
+        .container { max-width: 700px; margin: auto; position: relative; z-index: 1; }
+
+        .orb-container { position: relative; width: 120px; height: 120px; margin: 0 auto 50px; perspective: 1000px; }
+        .orb {
+            width: 100%; height: 100%; background: linear-gradient(135deg, var(--amora-vibrante), #5c3545);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: morphing 8s infinite ease-in-out;
+            box-shadow: 0 0 20px var(--amora-vibrante);
+        }
+        @keyframes morphing {
+            0%, 100% { border-radius: 30% 70% 70% 30%; transform: rotate(0deg); }
+            50% { border-radius: 50% 50% 30% 70%; transform: rotate(180deg); }
+        }
+
+        .card { 
+            background: var(--card-fundo); 
+            color: var(--texto-card); 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5); 
+            margin-bottom: 30px; 
+            border: 2px solid transparent; 
+            transition: all 0.4s ease;
+        }
+        .card:hover { 
+            border-color: var(--amora-vibrante);
+            box-shadow: 0 0 25px var(--amora-vibrante);
+            transform: scale(1.01);
+        }
+
+        /* Estilo para contorno preto em textos rosa */
+        .pink-outline {
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+        .card-header { text-align: center; }
+
+        h1 { color: #000; margin-bottom: 5px; font-weight: 800; font-size: 2.2em; }
+        .subtitle { color: #444; font-weight: 700; font-size: 1.15em; margin-bottom: 20px; }
+        h2 { 
+            color: var(--amora-vibrante); font-size: 1.4em; margin-bottom: 20px; 
+            text-transform: uppercase; font-weight: 800;
+        }
+        p { font-size: 1.2em; font-weight: 600; color: var(--texto-card); }
+        
+        .links a { 
+            display: inline-block; margin: 0 10px; color: var(--amora-vibrante); 
+            font-weight: 800; text-decoration: none;
+        }
+        .links a:hover { color: #000; }
     </style>
 </head>
 <body>
 
+<div class="code-rain" id="codeRain"></div>
+
 <div class="container">
-    <div class="hero">
-        <div class="shape-3d"></div>
+    <div class="orb-container"><div class="orb"></div></div>
+    
+    <div class="card card-header">
         <h1>Maria Luiza Mol</h1>
-        <p>Dev Backend & Analista de Sistemas</p>
+        <div class="subtitle">Analista de sistemas & Dev Backend</div>
         <div class="links">
-            <a href="https://www.linkedin.com/in/maria-luiza-ads">LinkedIn</a>
-            <a href="https://github.com/luizamoll">GitHub</a>
+            <a href="https://www.linkedin.com/in/maria-luiza-ads" target="_blank" class="pink-outline">LinkedIn</a>
+            <a href="https://github.com/luizamoll" target="_blank" class="pink-outline">GitHub</a>
         </div>
+        <p style="font-size: 1em; margin-top: 15px;">📍 Belo Horizonte, MG | 📞 (31) 99166-3405 | ✉️ Mluizamoll@hotmail.com</p>
     </div>
 
     <div class="card">
-        <h2>Resumo</h2>
-        <p>Transição estratégica para a tecnologia. Unindo visão de negócio e desenvolvimento.</p>
+        <h2 class="pink-outline">Resumo Profissional</h2>
+        <p>Estudante de ADS com sólida bagagem em gestão operacional e resolução de problemas complexos. Em transição de carreira para a tecnologia, unindo a visão estratégica de negócio com a prática em desenvolvimento backend e infraestrutura de redes.</p>
     </div>
 
     <div class="card">
-        <h2>Tecnologias</h2>
-        <p>Java • C • SQL • Git • Linux</p>
+        <h2 class="pink-outline">Experiência Técnica e Projetos</h2>
+        <p><strong>Proprietária - Restaurante D'Guster (2021-2025):</strong> Implementação de melhorias em processos através de ferramentas digitais e gestão financeira.</p>
+        <p><strong>Desenvolvimento de Software:</strong> Desenvolvimento de sistema de automação para e-commerce próprio, aplicando persistência de dados em SQL e rotinas de automação para otimização de gestão.</p>
+        <p><strong>Freelance Dev:</strong> Criação de sites e soluções de automação sob demanda.</p>
     </div>
 
     <div class="card">
-        <h2>Formação</h2>
-        <p>ADS | Newton Paiva (2028)</p>
+        <h2 class="pink-outline">Em Desenvolvimento</h2>
+        <p>Foco atual: Aprofundamento em <strong>Java (Backend)</strong> e otimização de <strong>Consultas SQL</strong> para ambientes de alta performance. Busco aplicar conceitos de Clean Code e versionamento contínuo em todos os meus projetos.</p>
+    </div>
+
+    <div class="card">
+        <h2 class="pink-outline">Formação</h2>
+        <p><strong>Análise e Desenvolvimento de Sistemas</strong> | Newton Paiva | Previsão: 2028.</p>
+        <p><em>Foco: Lógica de Programação, Organização de Computadores e Sistemas Operacionais.</em></p>
+        <p><strong>Assistente Administrativo</strong> | Senac | 2018-2019.</p>
+    </div>
+
+    <div class="card">
+        <h2 class="pink-outline">Competências</h2>
+        <p><strong>Técnicas:</strong> Lógica de Programação, C, Java, SQL, VS Code, Git/GitHub, Linux/Windows.</p>
+        <p><strong>Soft Skills:</strong> Proatividade, Comunicação, Organização, Pontualidade.</p>
     </div>
 </div>
+
+<script>
+    const rain = document.getElementById('codeRain');
+    const chars = "0101010101{}[]<>;()=>";
+    for(let i=0; i<60; i++) {
+        const div = document.createElement('div');
+        div.style.position = 'absolute';
+        div.style.left = Math.random() * 100 + '%';
+        div.style.animation = `fall ${8 + Math.random() * 10}s linear infinite`;
+        div.innerText = chars[Math.floor(Math.random() * chars.length)];
+        rain.appendChild(div);
+    }
+</script>
+<style>
+    @keyframes fall { from { top: -10%; } to { top: 110%; } }
+</style>
 </body>
 </html>

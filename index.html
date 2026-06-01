@@ -3,93 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo | Maria Luiza Mol</title>
+    <title>Portfólio | Maria Luiza Mol</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: #333; padding: 20px 10px; margin: 0; }
-        .container { max-width: 700px; margin: auto; }
-        
-        /* Ajuste para o mobile: Cards mais elegantes */
-        .card { 
-            background: white; padding: 25px; border-radius: 20px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; 
-            border: 2px solid transparent; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        :root { --primary: #ff00ff; --dark: #1a1a2e; --bg: #0f0f1a; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #fff; 
+            margin: 0; padding: 20px; display: flex; justify-content: center; 
         }
+        .container { max-width: 600px; width: 100%; }
 
-        /* Efeito de destaque para Desktop e Mobile (ao tocar) */
-        .card:hover, .card:active { 
-            border: 2px solid #ff00ff; 
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
-            transform: translateY(-5px);
-        }
-
+        /* Cabeçalho de Impacto */
+        .hero { text-align: center; padding: 40px 0; }
         .shape-3d {
-            width: 80px; height: 80px; margin: 0 auto 30px;
-            background: linear-gradient(45deg, #ff00ff, #764ba2);
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            animation: morphing 8s infinite ease-in-out;
-            box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
+            width: 120px; height: 120px; margin: 0 auto 20px;
+            background: linear-gradient(45deg, var(--primary), #764ba2);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morphing 10s infinite alternate;
         }
 
+        /* Cards com efeito Neon */
+        .card { 
+            background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 20px;
+            margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.4s; backdrop-filter: blur(10px);
+        }
+        /* O segredo: o efeito rosa agora é permanente nas bordas ou visível no toque */
+        .card:hover, .card:active { 
+            border-color: var(--primary);
+            box-shadow: 0 0 15px var(--primary);
+            transform: scale(1.02);
+        }
+
+        h1 { font-size: 2em; margin: 0; color: #fff; }
+        h2 { color: var(--primary); font-size: 1.1em; text-transform: uppercase; margin-bottom: 15px; }
+        .links a { 
+            color: #fff; text-decoration: none; padding: 10px 20px; 
+            border: 1px solid var(--primary); border-radius: 50px; margin: 5px; display: inline-block;
+        }
+        
         @keyframes morphing {
-            0%, 100% { transform: rotate(0deg); border-radius: 30% 70% 70% 30%; }
-            50% { transform: rotate(180deg); border-radius: 50% 50% 30% 70%; }
-        }
-
-        h1 { color: #1a1a2e; margin-bottom: 5px; font-size: 1.8em; }
-        h2 { color: #ff00ff; font-size: 1.2em; margin-top: 0; text-transform: uppercase; letter-spacing: 1px; }
-        .links a { display: inline-block; margin-right: 15px; color: #764ba2; font-weight: bold; text-decoration: none; transition: 0.3s; }
-        .links a:hover { color: #ff00ff; transform: scale(1.1); }
-
-        /* Melhoria de legibilidade no mobile */
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            h1 { font-size: 1.5em; }
+            0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            100% { border-radius: 60% 40% 30% 70% / 70% 30% 40% 60%; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="shape-3d"></div>
-    
-    <div class="card">
+    <div class="hero">
+        <div class="shape-3d"></div>
         <h1>Maria Luiza Mol</h1>
-        <p>Estudante de Análise e Desenvolvimento de Sistemas | Foco em Backend</p>
+        <p>Dev Backend & Analista de Sistemas</p>
         <div class="links">
-            <a href="https://www.linkedin.com/in/maria-luiza-ads" target="_blank">LinkedIn</a>
-            <a href="https://github.com/luizamoll" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/maria-luiza-ads">LinkedIn</a>
+            <a href="https://github.com/luizamoll">GitHub</a>
         </div>
-        <p style="font-size: 0.9em; margin-top: 15px;">📍 Belo Horizonte, MG | 📞 (31) 99166-3405 | ✉️ Mluizamoll@hotmail.com</p>
     </div>
 
     <div class="card">
-        <h2>Resumo Profissional</h2>
-        <p>Estudante de ADS com sólida bagagem em gestão operacional e resolução de problemas complexos. Em transição de carreira para a tecnologia, unindo a visão estratégica de negócio com a prática em desenvolvimento backend e infraestrutura de redes.</p>
+        <h2>Resumo</h2>
+        <p>Transição estratégica para a tecnologia. Unindo visão de negócio e desenvolvimento.</p>
     </div>
 
     <div class="card">
-        <h2>Experiência Técnica e Projetos</h2>
-        <p><strong>Proprietária - Restaurante D'Guster (2021-2025):</strong> Implementação de melhorias em processos através de ferramentas digitais e gestão financeira.</p>
-        <p><strong>Desenvolvimento de Software:</strong> Desenvolvimento de sistema de automação para e-commerce próprio, aplicando persistência de dados em SQL e rotinas de automação para otimização de gestão.</p>
-        <p><strong>Freelance Dev:</strong> Criação de sites e soluções de automação sob demanda.</p>
-    </div>
-
-    <div class="card">
-        <h2>Em Desenvolvimento</h2>
-        <p>Foco atual: Aprofundamento em <strong>Java (Backend)</strong> e otimização de <strong>Consultas SQL</strong> para ambientes de alta performance. Busco aplicar conceitos de Clean Code e versionamento contínuo em todos os meus projetos.</p>
+        <h2>Tecnologias</h2>
+        <p>Java • C • SQL • Git • Linux</p>
     </div>
 
     <div class="card">
         <h2>Formação</h2>
-        <p><strong>Análise e Desenvolvimento de Sistemas</strong> | Newton Paiva | Previsão: 2028.</p>
-        <p><em>Foco: Lógica de Programação, Organização de Computadores e Sistemas Operacionais.</em></p>
-        <p><strong>Assistente Administrativo</strong> | Senac | 2018-2019.</p>
-    </div>
-
-    <div class="card">
-        <h2>Competências</h2>
-        <p><strong>Técnicas:</strong> Lógica de Programação, C, Java, SQL, VS Code, Git/GitHub, Linux/Windows.</p>
-        <p><strong>Soft Skills:</strong> Proatividade, Comunicação, Organização, Pontualidade.</p>
+        <p>ADS | Newton Paiva (2028)</p>
     </div>
 </div>
 </body>

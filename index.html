@@ -2,64 +2,63 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo | Maria Luiza Mol</title>
     <style>
         :root { 
             --amora-neon: #ff007f; 
             --amora-escuro: #4a042e; 
+            --amora-opaco: rgba(255, 0, 127, 0.5);
             --fundo: #f0f2f5; 
             --card-fundo: #ffffff; 
-            --texto: #222222; 
         }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--fundo); color: var(--texto); margin: 0; padding: 20px; overflow-x: hidden; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--fundo); margin: 0; padding: 15px; overflow-x: hidden; }
         
-        .vertical-code-container {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;
-            z-index: -1; display: flex; justify-content: space-around;
-        }
-        .column { font-family: monospace; color: #000; opacity: 0.08; font-size: 12px; animation: fall linear infinite; }
+        .rain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; display: flex; justify-content: space-around; }
+        .col { color: #000; opacity: 0.2; font-family: monospace; font-size: 14px; animation: fall linear infinite; }
         @keyframes fall { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
 
-        .container { max-width: 700px; margin: auto; }
+        .container { max-width: 500px; margin: auto; }
 
-        .orb-container { width: 160px; height: 160px; margin: 0 auto 50px; }
-        .orb {
-            width: 100%; height: 100%;
+        /* Coração Vertical (0 deg) com sombra pulsante */
+        .heart-wrapper { width: 100px; height: 100px; margin: 0 auto 50px; display: flex; justify-content: center; align-items: center; }
+        .heart {
+            width: 70px; height: 70px;
             background: linear-gradient(135deg, var(--amora-neon), var(--amora-escuro));
-            box-shadow: 0 0 40px var(--amora-neon);
-            animation: ameba 10s infinite ease-in-out;
+            position: relative; transform: rotate(-45deg);
+            animation: pulse-shadow 3s infinite ease-in-out;
         }
-        @keyframes ameba {
-            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: scale(1); }
-            33% { border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%; transform: scale(1.1); }
-            66% { border-radius: 30% 70% 40% 60% / 40% 60% 40% 60%; transform: scale(0.95); }
+        .heart::before, .heart::after {
+            content: ""; position: absolute; width: 70px; height: 70px;
+            background: inherit; border-radius: 50%;
+        }
+        .heart::before { top: -35px; left: 0; }
+        .heart::after { top: 0; left: 35px; }
+        
+        @keyframes pulse-shadow {
+            0%, 100% { transform: scale(1) rotate(-45deg); box-shadow: 0 0 15px var(--amora-opaco); }
+            50% { transform: scale(1.15) rotate(-45deg); box-shadow: 0 0 40px var(--amora-neon); }
         }
 
-        .card { 
-            background: var(--card-fundo); padding: 40px; border-radius: 25px; margin-bottom: 25px;
-            border-left: 10px solid var(--amora-escuro); transition: 0.4s;
-        }
-        .card:hover { border-color: var(--amora-neon); box-shadow: 0 0 30px var(--amora-neon); transform: translateY(-5px); }
+        .card { background: var(--card-fundo); padding: 25px; border-radius: 20px; margin-bottom: 20px; border-left: 8px solid var(--amora-escuro); transition: 0.4s; }
+        .card:hover { border-color: var(--amora-neon); box-shadow: 0 0 20px var(--amora-neon); transform: translateY(-5px); }
 
-        /* Botões Estilo Outline (Borda Rosa, Fundo Branco, Letra Preta) */
-        .contact-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .btn { 
-            padding: 10px 20px; background: #fff; color: #000; 
-            text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 0.9em;
-            border: 2px solid var(--amora-neon); transition: 0.3s;
-        }
+        .contact-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .btn { padding: 10px; background: #fff; color: #000; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; border: 2px solid var(--amora-neon); }
         .btn:hover { background: var(--amora-neon); color: #fff; }
 
-        h1 { margin: 0; font-size: 2.4em; color: var(--amora-escuro); }
-        h2 { color: var(--amora-neon); text-transform: uppercase; margin-bottom: 15px; border-bottom: 2px solid var(--fundo); padding-bottom: 5px; }
+        h1 { margin: 0; font-size: 1.8em; color: var(--amora-escuro); }
+        h2 { color: var(--amora-neon); text-transform: uppercase; font-size: 1.1em; }
+        p { font-size: 0.95em; line-height: 1.6; }
     </style>
 </head>
 <body>
 
-<div class="vertical-code-container" id="codeRain"></div>
+<div class="rain" id="rain"></div>
 
 <div class="container">
-    <div class="orb-container"><div class="orb"></div></div>
+    <!-- Coração na vertical (ajustado posicionamento interno) -->
+    <div class="heart-wrapper"><div class="heart"></div></div>
     
     <div class="card">
         <h1>Maria Luiza Mol</h1>
@@ -68,14 +67,14 @@
             <a href="https://www.linkedin.com/in/maria-luiza-ads" class="btn">LinkedIn</a>
             <a href="https://github.com/luizamoll" class="btn">GitHub</a>
             <a href="https://wa.me/5531991663405" class="btn">(31) 99166-3405</a>
-            <a href="mailto:mluizamoll@hotmail.com" class="btn">mluizamoll@hotmail.com</a>
+            <a href="mailto:mluizamoll@hotmail.com" class="btn">E-mail</a>
         </div>
-        <p style="margin-top:20px; font-size: 0.9em;">📍 Belo Horizonte, MG</p>
+        <p style="margin-top:15px; font-weight: bold;">📍 Belo Horizonte, MG</p>
     </div>
 
     <div class="card">
         <h2>Resumo Profissional</h2>
-        <p>Estudante de Análise e Desenvolvimento de Sistemas com sólida experiência em gestão de negócios. Minha transição para a tecnologia é movida pela capacidade de traduzir necessidades operacionais complexas em soluções de software eficientes. Combino uma visão estratégica apurada com um compromisso técnico com a qualidade do código.</p>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas com sólida experiência em gestão de negócios. Minha transição para a tecnologia é movida pela capacidade de traduzir necessidades operacionais complexas em soluções de software eficientes. Combino visão estratégica apurada com um compromisso técnico com a qualidade do código.</p>
     </div>
 
     <div class="card">
@@ -87,17 +86,18 @@
     <div class="card">
         <h2>Formação & Conhecimentos</h2>
         <p><strong>ADS</strong> | Newton Paiva | Previsão: 2028.</p>
-        <p><strong>Competências:</strong> Lógica de Programação, Java, C, SQL, VS Code, Git/GitHub, Linux.</p>
-        <p><strong>Soft Skills:</strong> Visão sistêmica, resolução de problemas, comunicação assertiva e foco no resultado.</p>
+        <p><strong>Assistente Administrativo</strong> | Senac | 2018-2019.</p>
+        <p><strong>Stack Técnica:</strong> Java, SQL, C, Git/GitHub, VS Code, Linux.</p>
+        <p><strong>Soft Skills:</strong> Resolução de problemas, visão sistêmica, comunicação assertiva e foco no usuário.</p>
     </div>
 </div>
 
 <script>
-    const rain = document.getElementById('codeRain');
-    for(let i=0; i<40; i++) {
+    const rain = document.getElementById('rain');
+    for(let i=0; i<20; i++) {
         const col = document.createElement('div');
-        col.className = 'column';
-        col.style.animationDuration = (6 + Math.random() * 8) + 's';
+        col.className = 'col';
+        col.style.animationDuration = (8 + Math.random() * 5) + 's';
         col.innerText = "0\n1\n0\n1\n{\n}\n<>\n;";
         rain.appendChild(col);
     }

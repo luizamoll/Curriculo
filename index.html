@@ -83,6 +83,8 @@
       text-decoration: none;
       border-bottom: 1px solid transparent;
       width: fit-content;
+      max-width: 100%;
+      overflow-wrap: anywhere;
     }
 
     .contact a:hover { border-color: var(--accent); }
@@ -131,6 +133,17 @@
       font-size: 0.88rem;
     }
 
+    .tag-group + .tag-group { margin-top: 16px; }
+
+    .tag-group-title {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     .tag-list {
       display: flex;
       flex-wrap: wrap;
@@ -144,6 +157,12 @@
       border-radius: 999px;
       background: #fafaf9;
       font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    .tag.learning {
+      background: var(--accent-soft);
+      border-color: #ead3de;
     }
 
     .project {
@@ -165,6 +184,12 @@
     }
 
     .project a:hover { text-decoration: underline; }
+
+    .project-stack {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
 
     .compact-list {
       margin: 0;
@@ -198,11 +223,13 @@
 
     @media (max-width: 760px) {
       .page { width: 100%; margin: 0; border-left: 0; border-right: 0; }
-      .hero { grid-template-columns: 1fr; gap: 28px; padding: 42px 24px 32px; }
-      .contact { align-self: initial; }
+      .hero { grid-template-columns: 1fr; gap: 24px; padding: 40px 24px 30px; }
+      .contact { align-self: initial; gap: 8px; }
       .content { grid-template-columns: 1fr; }
-      aside { padding: 32px 24px; border-right: 0; border-bottom: 1px solid var(--line); }
-      main { padding: 32px 24px 42px; }
+      aside { padding: 30px 24px; border-right: 0; border-bottom: 1px solid var(--line); }
+      main { padding: 30px 24px 40px; }
+      section + section { margin-top: 32px; }
+      .tag { font-size: 0.8rem; padding: 5px 9px; }
       footer { padding: 18px 24px; }
     }
 
@@ -236,7 +263,7 @@
         <strong>Belo Horizonte, MG</strong>
         <a href="tel:+5531991663405">+55 31 99166-3405</a>
         <a href="mailto:mluizamoll@gmail.com">mluizamoll@gmail.com</a>
-        <a href="https://www.linkedin.com/in/maria-luiza-ads" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/maria-luiza-ads" target="_blank" rel="noreferrer">LinkedIn · maria-luiza-ads</a>
         <a href="https://github.com/luizamoll" target="_blank" rel="noreferrer">GitHub · @luizamoll</a>
       </div>
     </header>
@@ -245,7 +272,7 @@
       <aside>
         <section>
           <h2>Objetivo</h2>
-          <p>Estágio ou posição júnior em Desenvolvimento de Software / Back-end Java.</p>
+          <p>Estágio ou vaga júnior em Desenvolvimento de Software / Back-end Java.</p>
         </section>
 
         <section>
@@ -259,21 +286,32 @@
 
         <section>
           <h2>Competências técnicas</h2>
-          <div class="tag-list">
-            <span class="tag">Java</span>
-            <span class="tag">POO</span>
-            <span class="tag">Lógica</span>
-            <span class="tag">Algoritmos</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">SQL</span>
-            <span class="tag">NoSQL</span>
-            <span class="tag">APIs REST</span>
-            <span class="tag">Spring Boot</span>
-            <span class="tag">Python</span>
-            <span class="tag">VS Code</span>
+
+          <div class="tag-group">
+            <p class="tag-group-title">Em prática</p>
+            <div class="tag-list">
+              <span class="tag">Java</span>
+              <span class="tag">POO</span>
+              <span class="tag">Lógica de programação</span>
+              <span class="tag">Algoritmos</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">SQL</span>
+              <span class="tag">VS Code</span>
+            </div>
           </div>
-          <p class="meta">Spring Boot, Python, testes e boas práticas de código em formação.</p>
+
+          <div class="tag-group">
+            <p class="tag-group-title">Em aprendizado</p>
+            <div class="tag-list">
+              <span class="tag learning">APIs REST</span>
+              <span class="tag learning">Spring Boot</span>
+              <span class="tag learning">NoSQL</span>
+              <span class="tag learning">Python</span>
+              <span class="tag learning">Testes</span>
+              <span class="tag learning">Boas práticas</span>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -328,8 +366,9 @@
 
           <article class="project">
             <h3>Sistema de Gestão de Vendas e Repasses Imobiliários</h3>
-            <p class="meta">Projeto em desenvolvimento</p>
-            <p>Levantamento e modelagem de regras de negócio para cadastro de empreendimentos, registro de vendas, entrada e parcelas, aplicação de taxas e impostos e cálculo de repasses e comissões. Projeto planejado para evoluir para uma aplicação back-end.</p>
+            <p class="meta">Aplicação web em desenvolvimento</p>
+            <p>Aplicação para gestão de empreendimentos, vendas, parcelas, inadimplência, impostos, comissões e distribuição de repasses. O projeto já possui regras de negócio e interface funcional e está sendo evoluído com foco em arquitetura back-end e persistência de dados.</p>
+            <p class="project-stack">Tecnologias atuais: TypeScript, React/TanStack e Git/GitHub.</p>
           </article>
 
           <article class="project">
@@ -358,7 +397,7 @@
     </div>
 
     <footer>
-      <span>Currículo web · conteúdo alinhado à versão profissional em Google Docs</span>
+      <span>Maria Luiza Mol · Back-end Java</span>
       <button class="print-btn" type="button" onclick="window.print()">Imprimir / salvar em PDF</button>
     </footer>
   </div>

@@ -1,106 +1,366 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo | Maria Luiza Mol</title>
-    <style>
-        :root { 
-            --amora-neon: #ff007f; 
-            --amora-escuro: #4a042e; 
-            --amora-opaco: rgba(255, 0, 127, 0.5);
-            --fundo: #f0f2f5; 
-            --card-fundo: #ffffff; 
-        }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--fundo); margin: 0; padding: 15px; overflow-x: hidden; }
-        
-        .rain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; display: flex; justify-content: space-around; }
-        .col { color: #000; opacity: 0.2; font-family: monospace; font-size: 14px; animation: fall linear infinite; }
-        @keyframes fall { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Currículo profissional de Maria Luiza Mol — estudante de Análise e Desenvolvimento de Sistemas com foco em desenvolvimento back-end Java." />
+  <title>Maria Luiza Mol | Back-end Java</title>
+  <style>
+    :root {
+      --bg: #f5f5f3;
+      --surface: #ffffff;
+      --text: #151515;
+      --muted: #66645f;
+      --line: #deddd8;
+      --accent: #b10058;
+      --accent-soft: #f7e6ee;
+      --max: 1040px;
+    }
 
-        .container { max-width: 500px; margin: auto; }
+    * { box-sizing: border-box; }
 
-        /* Coração Vertical (0 deg) com sombra pulsante */
-        .heart-wrapper { width: 100px; height: 100px; margin: 0 auto 50px; display: flex; justify-content: center; align-items: center; }
-        .heart {
-            width: 70px; height: 70px;
-            background: linear-gradient(135deg, var(--amora-neon), var(--amora-escuro));
-            position: relative; transform: rotate(-45deg);
-            animation: pulse-shadow 3s infinite ease-in-out;
-        }
-        .heart::before, .heart::after {
-            content: ""; position: absolute; width: 70px; height: 70px;
-            background: inherit; border-radius: 50%;
-        }
-        .heart::before { top: -35px; left: 0; }
-        .heart::after { top: 0; left: 35px; }
-        
-        @keyframes pulse-shadow {
-            0%, 100% { transform: scale(1) rotate(-45deg); box-shadow: 0 0 15px var(--amora-opaco); }
-            50% { transform: scale(1.15) rotate(-45deg); box-shadow: 0 0 40px var(--amora-neon); }
-        }
+    html { scroll-behavior: smooth; }
 
-        .card { background: var(--card-fundo); padding: 25px; border-radius: 20px; margin-bottom: 20px; border-left: 8px solid var(--amora-escuro); transition: 0.4s; }
-        .card:hover { border-color: var(--amora-neon); box-shadow: 0 0 20px var(--amora-neon); transform: translateY(-5px); }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        .contact-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
-        .btn { padding: 10px; background: #fff; color: #000; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; border: 2px solid var(--amora-neon); }
-        .btn:hover { background: var(--amora-neon); color: #fff; }
+    a { color: inherit; }
 
-        h1 { margin: 0; font-size: 1.8em; color: var(--amora-escuro); }
-        h2 { color: var(--amora-neon); text-transform: uppercase; font-size: 1.1em; }
-        p { font-size: 0.95em; line-height: 1.6; }
-    </style>
+    .page {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 32px auto;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.05);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 40px;
+      padding: 56px 60px 44px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      font-weight: 780;
+    }
+
+    .role {
+      max-width: 620px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .contact {
+      align-self: end;
+      display: grid;
+      gap: 9px;
+      font-size: 0.92rem;
+    }
+
+    .contact a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      width: fit-content;
+    }
+
+    .contact a:hover { border-color: var(--accent); }
+
+    .content {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+    }
+
+    aside {
+      padding: 42px 36px 52px 60px;
+      border-right: 1px solid var(--line);
+    }
+
+    main { padding: 42px 60px 52px 44px; }
+
+    section + section { margin-top: 38px; }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 0.8rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    p { margin: 7px 0 0; }
+
+    .muted { color: var(--muted); }
+
+    .item + .item {
+      margin-top: 21px;
+      padding-top: 21px;
+      border-top: 1px solid var(--line);
+    }
+
+    .meta {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fafaf9;
+      font-size: 0.82rem;
+    }
+
+    .project {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: linear-gradient(135deg, #fff 0%, #fff 76%, var(--accent-soft) 100%);
+    }
+
+    .project + .project { margin-top: 14px; }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .project a:hover { text-decoration: underline; }
+
+    .compact-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .compact-list li + li { margin-top: 8px; }
+
+    footer {
+      padding: 18px 60px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.78rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .print-btn {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--accent);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    @media (max-width: 760px) {
+      .page { width: 100%; margin: 0; border-left: 0; border-right: 0; }
+      .hero { grid-template-columns: 1fr; gap: 28px; padding: 42px 24px 32px; }
+      .contact { align-self: initial; }
+      .content { grid-template-columns: 1fr; }
+      aside { padding: 32px 24px; border-right: 0; border-bottom: 1px solid var(--line); }
+      main { padding: 32px 24px 42px; }
+      footer { padding: 18px 24px; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 11mm; }
+      body { background: #fff; font-size: 9.5pt; }
+      .page { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      .hero { padding: 0 0 7mm; grid-template-columns: 1.35fr 0.65fr; gap: 8mm; }
+      h1 { font-size: 29pt; }
+      .content { grid-template-columns: 0.72fr 1.28fr; }
+      aside { padding: 7mm 7mm 0 0; }
+      main { padding: 7mm 0 0 8mm; }
+      section + section { margin-top: 6mm; }
+      .item + .item { margin-top: 4mm; padding-top: 4mm; }
+      .project { padding: 4mm; break-inside: avoid; }
+      footer { display: none; }
+      a { text-decoration: none; }
+    }
+  </style>
 </head>
 <body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Desenvolvimento de Software · Back-end Java</p>
+        <h1>Maria Luiza<br />Mol</h1>
+        <p class="role">Estudante de Análise e Desenvolvimento de Sistemas em formação prática para desenvolvimento back-end, com foco em Java, orientação a objetos, APIs, Spring Boot, bancos de dados e Git/GitHub.</p>
+      </div>
 
-<div class="rain" id="rain"></div>
+      <div class="contact" aria-label="Informações de contato">
+        <strong>Belo Horizonte, MG</strong>
+        <a href="tel:+5531991663405">+55 31 99166-3405</a>
+        <a href="mailto:mluizamoll@gmail.com">mluizamoll@gmail.com</a>
+        <a href="https://www.linkedin.com/in/maria-luiza-ads" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/luizamoll" target="_blank" rel="noreferrer">GitHub · @luizamoll</a>
+      </div>
+    </header>
 
-<div class="container">
-    <!-- Coração na vertical (ajustado posicionamento interno) -->
-    <div class="heart-wrapper"><div class="heart"></div></div>
-    
-    <div class="card">
-        <h1>Maria Luiza Mol</h1>
-        <p><strong>Analista de Sistemas & Dev Backend</strong></p>
-        <div class="contact-group">
-            <a href="https://www.linkedin.com/in/maria-luiza-ads" class="btn">LinkedIn</a>
-            <a href="https://github.com/luizamoll" class="btn">GitHub</a>
-            <a href="https://wa.me/5531991663405" class="btn">(31) 99166-3405</a>
-            <a href="mailto:mluizamoll@hotmail.com" class="btn">E-mail</a>
-        </div>
-        <p style="margin-top:15px; font-weight: bold;">📍 Belo Horizonte, MG</p>
+    <div class="content">
+      <aside>
+        <section>
+          <h2>Objetivo</h2>
+          <p>Estágio ou posição júnior em Desenvolvimento de Software / Back-end Java.</p>
+        </section>
+
+        <section>
+          <h2>Formação acadêmica</h2>
+          <div class="item">
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p class="meta">Centro Universitário Newton Paiva Wyden</p>
+            <p class="meta">Previsão de conclusão: 2028</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Competências técnicas</h2>
+          <div class="tag-list">
+            <span class="tag">Java</span>
+            <span class="tag">POO</span>
+            <span class="tag">Lógica</span>
+            <span class="tag">Algoritmos</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">SQL</span>
+            <span class="tag">NoSQL</span>
+            <span class="tag">APIs REST</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Python</span>
+            <span class="tag">VS Code</span>
+          </div>
+          <p class="meta">Spring Boot, Python, testes e boas práticas de código em formação.</p>
+        </section>
+
+        <section>
+          <h2>Competências profissionais</h2>
+          <ul class="compact-list muted">
+            <li>Autonomia e iniciativa</li>
+            <li>Organização e gestão de prioridades</li>
+            <li>Comunicação com clientes</li>
+            <li>Aprendizado contínuo</li>
+            <li>Resolução de problemas</li>
+            <li>Responsabilidade com prazos</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Idiomas</h2>
+          <p><strong>Inglês</strong></p>
+          <p class="meta">Em desenvolvimento, com prática contínua voltada à comunicação e tecnologia.</p>
+        </section>
+      </aside>
+
+      <main>
+        <section>
+          <h2>Resumo profissional</h2>
+          <p>Estudante de Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento back-end e Java. Formação complementar prática pela EBAC em Java e fundamentos de desenvolvimento de software. Em evolução em orientação a objetos, APIs REST, Spring Boot, bancos de dados e versionamento com Git/GitHub. Experiência profissional autônoma com gestão de rotina, atendimento a clientes e entrega de projetos digitais.</p>
+        </section>
+
+        <section>
+          <h2>Formação complementar</h2>
+
+          <div class="item">
+            <h3>Especialista Back-end Java — EBAC</h3>
+            <p class="meta">Em andamento</p>
+            <p>Java, orientação a objetos, Git/GitHub, APIs REST, Spring Boot, bancos de dados SQL/NoSQL, testes e boas práticas de código.</p>
+          </div>
+
+          <div class="item">
+            <h3>Carreira e Desenvolvimento Profissional — EBAC</h3>
+            <p class="meta">Em andamento</p>
+            <p>Planejamento de carreira, comunicação profissional, posicionamento no mercado e preparação para processos seletivos.</p>
+          </div>
+
+          <div class="item">
+            <h3>Assistente Administrativo — Senac</h3>
+            <p class="meta">2018–2019</p>
+            <p>Rotinas administrativas, organização de processos e atendimento.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Projetos</h2>
+
+          <article class="project">
+            <h3>Sistema de Gestão de Vendas e Repasses Imobiliários</h3>
+            <p class="meta">Projeto em desenvolvimento</p>
+            <p>Levantamento e modelagem de regras de negócio para cadastro de empreendimentos, registro de vendas, entrada e parcelas, aplicação de taxas e impostos e cálculo de repasses e comissões. Projeto planejado para evoluir para uma aplicação back-end.</p>
+          </article>
+
+          <article class="project">
+            <h3>Java Back-end Studies</h3>
+            <p>Repositório utilizado para organizar exercícios e projetos de aprendizagem em Java e back-end, com evolução contínua conforme o avanço da formação prática.</p>
+            <a href="https://github.com/luizamoll/java-backend-studies" target="_blank" rel="noreferrer">Ver repositório →</a>
+          </article>
+        </section>
+
+        <section>
+          <h2>Experiência profissional</h2>
+
+          <div class="item">
+            <h3>Design e Soluções Digitais · Freelancer</h3>
+            <p class="meta">Presente</p>
+            <p>Criação de identidades visuais, materiais para redes sociais e presença digital para pequenos negócios, com atendimento direto ao cliente, organização de demandas e entrega de projetos.</p>
+          </div>
+
+          <div class="item">
+            <h3>Autônoma no Comércio</h3>
+            <p class="meta">2021–2025</p>
+            <p>Gestão operacional, controle financeiro, organização de rotina e atendimento ao público.</p>
+          </div>
+        </section>
+      </main>
     </div>
 
-    <div class="card">
-        <h2>Resumo Profissional</h2>
-        <p>Estudante de Análise e Desenvolvimento de Sistemas com sólida experiência em gestão de negócios. Minha transição para a tecnologia é movida pela capacidade de traduzir necessidades operacionais complexas em soluções de software eficientes. Combino visão estratégica apurada com um compromisso técnico com a qualidade do código.</p>
-    </div>
-
-    <div class="card">
-        <h2>Experiência Técnica</h2>
-        <p><strong>Proprietária - Restaurante D'Guster (2021-2025):</strong> Responsável pela gestão estratégica, financeira e operacional. Implementei processos de digitalização que reduziram erros e otimizaram o fluxo de trabalho.</p>
-        <p><strong>Desenvolvimento:</strong> Foco em backend com Java e persistência de dados SQL. Experiência na criação de soluções de automação e sites sob demanda, sempre aplicando boas práticas de lógica de programação.</p>
-    </div>
-
-    <div class="card">
-        <h2>Formação & Conhecimentos</h2>
-        <p><strong>ADS</strong> | Newton Paiva | Previsão: 2028.</p>
-        <p><strong>Assistente Administrativo</strong> | Senac | 2018-2019.</p>
-        <p><strong>Stack Técnica:</strong> Java, SQL, C, Git/GitHub, VS Code, Linux.</p>
-        <p><strong>Soft Skills:</strong> Resolução de problemas, visão sistêmica, comunicação assertiva e foco no usuário.</p>
-    </div>
-</div>
-
-<script>
-    const rain = document.getElementById('rain');
-    for(let i=0; i<20; i++) {
-        const col = document.createElement('div');
-        col.className = 'col';
-        col.style.animationDuration = (8 + Math.random() * 5) + 's';
-        col.innerText = "0\n1\n0\n1\n{\n}\n<>\n;";
-        rain.appendChild(col);
-    }
-</script>
+    <footer>
+      <span>Currículo web · conteúdo alinhado à versão profissional em Google Docs</span>
+      <button class="print-btn" type="button" onclick="window.print()">Imprimir / salvar em PDF</button>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,10 +1,14 @@
 # Currículo Tech — Maria Luiza Mol
 
-Currículo web profissional com foco em oportunidades de **estágio e posição júnior em desenvolvimento de software / back-end Java**.
+Currículo web profissional com foco em oportunidades de **estágio e vaga júnior em desenvolvimento de software / back-end Java**.
+
+[**Acessar currículo online**](https://luizamoll.github.io/Curriculo/)
 
 ## Sobre
 
-Este repositório reúne a versão web do meu currículo, alinhada ao conteúdo profissional utilizado em processos seletivos. A apresentação foi construída em HTML e CSS puro, com layout responsivo e versão otimizada para impressão/PDF.
+Este repositório reúne a versão web do meu currículo profissional. A apresentação foi construída em HTML e CSS puro, com layout responsivo e versão otimizada para impressão/PDF.
+
+O conteúdo acompanha minha formação em Análise e Desenvolvimento de Sistemas e a evolução prática dos projetos publicados no GitHub.
 
 ## Foco profissional
 
@@ -24,19 +28,27 @@ Este repositório reúne a versão web do meu currículo, alinhada ao conteúdo 
 
 ## Projetos relacionados
 
-### Sistema de Gestão de Vendas e Repasses Imobiliários
-Projeto em desenvolvimento com modelagem de regras de negócio para empreendimentos, vendas, parcelas, impostos, comissões e repasses financeiros.
+### ImobControl
+Sistema para controle financeiro de empreendimentos imobiliários, com vendas, parcelas, recebimentos, impostos, comissões e distribuição de repasses.
+
+A interface foi desenvolvida em React e TypeScript e o projeto já iniciou sua evolução para um back-end próprio em Java e Spring Boot.
+
+[Ver repositório](https://github.com/luizamoll/imobcontrol-finance-dashboard)
 
 ### Java Back-end Studies
-Repositório público de estudos e projetos em Java e back-end:
+Repositório público onde organizo exercícios, conceitos e projetos desenvolvidos durante meus estudos de Java e back-end.
 
-https://github.com/luizamoll/java-backend-studies
+[Ver repositório](https://github.com/luizamoll/java-backend-studies)
+
+## Tecnologias desta página
+
+`HTML` · `CSS` · `GitHub Pages`
 
 ## Contato
 
-- LinkedIn: https://www.linkedin.com/in/maria-luiza-ads
-- GitHub: https://github.com/luizamoll
-- E-mail: mluizamoll@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/maria-luiza-ads)
+- [GitHub](https://github.com/luizamoll)
+- [E-mail](mailto:mluizamoll@gmail.com)
 
 ---
 

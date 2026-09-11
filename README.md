@@ -1,6 +1,6 @@
 # Currículo Tech — Maria Luiza Mol
 
-Currículo web profissional com foco em oportunidades de **estágio e vaga júnior em desenvolvimento de software / back-end Java**.
+Currículo web profissional voltado a oportunidades em **desenvolvimento de sistemas, back-end, automação e tecnologia corporativa**.
 
 [**Acessar currículo online**](https://luizamoll.github.io/Curriculo/)
 
@@ -8,16 +8,20 @@ Currículo web profissional com foco em oportunidades de **estágio e vaga júni
 
 Este repositório reúne a versão web do meu currículo profissional. A apresentação foi construída em HTML e CSS puro, com layout responsivo e versão otimizada para impressão/PDF.
 
-O conteúdo acompanha minha formação em Análise e Desenvolvimento de Sistemas e a evolução prática dos projetos publicados no GitHub.
+Hoje atuo em TI com **suporte a sistemas, infraestrutura, Active Directory, acessos e resolução de incidentes**, ao mesmo tempo em que desenvolvo **ferramentas internas em Python** para automatizar conferências, validar dados e apoiar processos internos.
+
+Minha trajetória anterior em **empreendedorismo, design e marketing** complementa a formação técnica com visão de negócio, produto, experiência do usuário e comunicação.
 
 ## Foco profissional
 
-- Desenvolvimento back-end com Java
-- Programação orientada a objetos
-- APIs REST e Spring Boot
-- Bancos de dados SQL e fundamentos de NoSQL
+- Desenvolvimento de sistemas e back-end
+- Automação de processos internos
+- Python aplicado a ferramentas corporativas
+- Active Directory, acessos e suporte a sistemas
+- Análise e interpretação de regras de negócio
 - Git e GitHub
-- Lógica de programação e algoritmos
+- Java e orientação a objetos
+- Evolução para APIs REST, Spring Boot, SQL e testes
 
 ## Formação
 
@@ -26,19 +30,31 @@ O conteúdo acompanha minha formação em Análise e Desenvolvimento de Sistemas
 - **Carreira e Desenvolvimento Profissional** — EBAC · em andamento
 - **Assistente Administrativo** — Senac · 2018–2019
 
-## Projetos relacionados
+## Projetos e prática
+
+### Ferramenta interna de automação e conferência de dados
+Projeto profissional desenvolvido em Python para estruturar relatórios, validar informações, localizar divergências e gerar saídas operacionais. O trabalho envolve **regras de negócio, rastreabilidade, testes, Git/GitHub e experiência de uso para áreas internas**.
+
+O repositório é privado por se tratar de uma ferramenta interna.
 
 ### ImobControl
-Sistema para controle financeiro de empreendimentos imobiliários, com vendas, parcelas, recebimentos, impostos, comissões e distribuição de repasses.
-
-A interface foi desenvolvida em React e TypeScript e o projeto já iniciou sua evolução para um back-end próprio em Java e Spring Boot.
+Sistema para controle financeiro de empreendimentos imobiliários, com vendas, parcelas, impostos, comissões e distribuição de repasses.
 
 [Ver repositório](https://github.com/luizamoll/imobcontrol-finance-dashboard)
 
 ### Java Back-end Studies
-Repositório público onde organizo exercícios, conceitos e projetos desenvolvidos durante meus estudos de Java e back-end.
+Laboratório público de estudos práticos em Java, lógica, orientação a objetos e fundamentos de back-end.
 
 [Ver repositório](https://github.com/luizamoll/java-backend-studies)
+
+### MarketArt
+Projeto acadêmico de produto digital para compra e venda de pacotes de arte, explorando organização de solução, experiência do usuário e desenvolvimento web colaborativo.
+
+[Ver repositório](https://github.com/luizamoll/MarketArt)
+
+## Competências que atravessam minha trajetória
+
+Além da parte técnica, trago experiência em **resolução de problemas, documentação, levantamento de necessidades, visão sistêmica, design, comunicação, marketing e gestão de negócio**.
 
 ## Tecnologias desta página
 

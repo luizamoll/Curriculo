@@ -1,64 +1,65 @@
 # Currículo Tech — Maria Luiza Mol
 
-Currículo web profissional voltado a oportunidades em **sistemas corporativos, desenvolvimento back-end, automação e tecnologia aplicada a processos de negócio**.
+Currículo web profissional voltado a oportunidades em **sistemas corporativos, desenvolvimento back-end, automação, IA aplicada e tecnologia orientada a regras de negócio**.
 
 [**Acessar currículo online**](https://luizamoll.github.io/Curriculo/)
 
 ## Sobre
 
-Este repositório reúne a versão web do meu currículo profissional. A apresentação foi construída em HTML e CSS puro, com layout responsivo e versão otimizada para impressão/PDF.
+Sou profissional de TI e estudante de **Análise e Desenvolvimento de Sistemas no Centro Universitário Unihorizontes**, com atuação em sistemas corporativos e desenvolvimento de ferramentas internas.
 
-Hoje atuo em TI com **sistemas corporativos, suporte, infraestrutura, Active Directory, gestão de acessos e resolução de incidentes**, ao mesmo tempo em que desenvolvo **ferramentas internas em Python** para automatizar processos, estruturar e validar dados e apoiar necessidades operacionais.
+Trabalho com **Python e Java**, automação, análise de processos, regras de negócio, Git/GitHub e IA aplicada ao desenvolvimento e à resolução de problemas.
 
-Minha trajetória anterior em **empreendedorismo, design e marketing** complementa a formação técnica com visão de negócio, produto, experiência do usuário, comunicação e entendimento de operação. Esse repertório me ajuda a traduzir demandas de usuários e áreas internas em soluções técnicas claras e úteis.
+Além da atuação corporativa, desenvolvo e comercializo **software autoral**. O **ImobControl** nasceu de uma necessidade real de negócio e já é utilizado comercialmente por cliente, trazendo experiência prática desde levantamento de requisitos e modelagem de domínio até desenvolvimento, implantação, validação e evolução contínua.
 
 ## Foco profissional
 
 - Sistemas corporativos e desenvolvimento back-end
-- Automação de processos internos
-- Python aplicado a ferramentas corporativas
-- Active Directory, acessos e suporte a sistemas
-- Levantamento e interpretação de regras de negócio
-- Melhoria e documentação de processos
+- Desenvolvimento de ferramentas internas
+- Python e Java aplicados a problemas reais
+- Automação de processos
+- Modelagem e interpretação de regras de negócio
+- IA aplicada ao desenvolvimento, análise e documentação
+- APIs REST, Spring Boot e PostgreSQL
 - Git e GitHub
-- Java e orientação a objetos
-- Evolução para APIs REST, Spring Boot, SQL e testes
-- Experiência do usuário aplicada a ferramentas internas
+- Produto, implantação e evolução de software em uso real
 
 ## Formação
 
-- **Análise e Desenvolvimento de Sistemas** — Centro Universitário Newton Paiva Wyden · conclusão prevista para 2028
+- **Análise e Desenvolvimento de Sistemas** — Centro Universitário Unihorizontes · conclusão prevista para 2028
 - **Especialista Back-end Java** — EBAC · em andamento
 - **Carreira e Desenvolvimento Profissional** — EBAC · em andamento
 - **Assistente Administrativo** — Senac · 2018–2019
 
-## Projetos e prática
+## Experiência com produto autoral
 
-### Ferramenta interna de automação e conferência de dados
-Projeto profissional desenvolvido em Python para estruturar relatórios, validar informações, localizar divergências e gerar saídas operacionais. O trabalho conecta **programação, regras de negócio, rastreabilidade, testes, Git/GitHub e experiência de uso para áreas internas**.
+### ImobControl — software comercial em uso real
 
-O repositório é privado por se tratar de uma ferramenta interna.
+Sistema web autoral para gestão comercial e financeira de empreendimentos imobiliários. O produto é **comercializado e utilizado por cliente real**, e seu desenvolvimento envolve levantamento de requisitos, regras financeiras, desenvolvimento, testes, versionamento, implantação e manutenção evolutiva.
 
-### ImobControl
-Sistema para controle financeiro de empreendimentos imobiliários, com vendas, parcelas, impostos, comissões e distribuição de repasses.
+A solução trabalha com empreendimentos, unidades, vendas, parcelas, recebimentos, impostos, comissões e repasses.
 
 [Ver repositório](https://github.com/luizamoll/imobcontrol-finance-dashboard)
 
-### Java Back-end Studies
-Laboratório público de estudos práticos em Java, lógica, orientação a objetos e fundamentos de back-end.
+## Outros projetos e prática
 
-[Ver repositório](https://github.com/luizamoll/java-backend-studies)
+### Ferramenta interna de automação e conferência de dados
 
-### MarketArt
-Projeto acadêmico de produto digital para compra e venda de pacotes de arte, explorando organização de solução, experiência do usuário e desenvolvimento web colaborativo.
+Projeto profissional em Python para estruturar relatórios, validar informações, localizar divergências e gerar saídas operacionais. Conecta **programação, regras de negócio, rastreabilidade, testes, Git/GitHub e experiência de uso para áreas internas**.
 
-[Ver repositório](https://github.com/luizamoll/MarketArt)
+O repositório é privado por se tratar de uma ferramenta interna.
+
+### Gestão de Impressões e ESG
+
+Sistema em Java para análise de relatórios de impressão, identificação de equipamentos, comparação de contadores, cálculo de volume, franquia e excedentes e geração de indicadores. O projeto incorpora princípios de **ESG** ao transformar consumo de impressão em dados para gestão e redução de desperdícios.
+
+[Ver repositório](https://github.com/luizamoll/gestao-impressoes)
 
 ## Competências que atravessam minha trajetória
 
-Além da parte técnica, trago experiência em **visão sistêmica, resolução de problemas, levantamento de necessidades, análise de regras de negócio, documentação, comunicação com usuários, design, marketing e gestão de negócio**.
+Além da parte técnica, trago experiência em **visão sistêmica, resolução de problemas, levantamento de necessidades, análise de regras de negócio, documentação, comunicação com usuários, produto e gestão de negócio**.
 
-Minha formação multidisciplinar favorece especialmente contextos em que tecnologia precisa conversar bem com **processos, usuários e objetivos do negócio**.
+Minha experiência com um software autoral já comercializado acrescenta contato direto com **cliente, operação real, requisitos, implantação e evolução de produto**, além do desenvolvimento técnico.
 
 ## Tecnologias desta página
 
